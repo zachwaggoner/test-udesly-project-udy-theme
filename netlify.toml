@@ -1,3 +1,12 @@
 [build]
 publish = "public"
 command = "eleventy"
+
+[context.production]
+environment = { SITE_URL = "https://about.li.me" }
+
+[context.deploy-preview]
+environment = { SITE_URL = "" }
+
+[context.branch-deploy]
+environment = { SITE_URL = "" }
